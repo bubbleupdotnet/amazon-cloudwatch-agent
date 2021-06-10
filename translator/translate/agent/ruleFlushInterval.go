@@ -11,7 +11,7 @@ type FlushInterval struct {
 }
 
 func (f *FlushInterval) ApplyRule(input interface{}) (returnKey string, returnVal interface{}) {
-	returnKey, returnVal = translator.DefaultCase("flush_interval", "1s", input)
+	returnKey, returnVal = translator.DefaultCase("flush_interval", "10s", input)
 	return
 }
 
