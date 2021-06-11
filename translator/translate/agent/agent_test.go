@@ -38,7 +38,7 @@ func agentDefaultConfig(t *testing.T, osType string) {
 	_, val := a.ApplyRule(input)
 	agent := map[string]interface{}{
 		"debug":               false,
-		"flush_interval":      "1s",
+		"flush_interval":      "10s",
 		"flush_jitter":        "0s",
 		"hostname":            "",
 		"interval":            "59s",
@@ -71,7 +71,7 @@ func agentSpecificConfig(t *testing.T, osType string) {
 	_, val := a.ApplyRule(input)
 	agent := map[string]interface{}{
 		"debug":               true,
-		"flush_interval":      "1s",
+		"flush_interval":      "10s",
 		"flush_jitter":        "0s",
 		"hostname":            "",
 		"interval":            "60s",
@@ -105,7 +105,7 @@ func noAgentConfig(t *testing.T, osType string) {
 	_, val := a.ApplyRule(input)
 	agent := map[string]interface{}{
 		"debug":               false,
-		"flush_interval":      "1s",
+		"flush_interval":      "10s",
 		"flush_jitter":        "0s",
 		"hostname":            "",
 		"interval":            "60s",
@@ -138,7 +138,7 @@ func internal(t *testing.T, osType string) {
 
 	agent := map[string]interface{}{
 		"debug":               false,
-		"flush_interval":      "1s",
+		"flush_interval":      "10s",
 		"flush_jitter":        "0s",
 		"hostname":            "",
 		"interval":            "60s",
